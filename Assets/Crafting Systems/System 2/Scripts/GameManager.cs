@@ -9,5 +9,11 @@ public class GameManager : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+
     }
+
+    private void Start()
+    {
+    }
+       
 }
