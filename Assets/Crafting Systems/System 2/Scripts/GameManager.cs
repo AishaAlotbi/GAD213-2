@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
        
 }
