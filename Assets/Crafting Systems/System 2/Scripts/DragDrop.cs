@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     private RectTransform rectTransform;
+    private Inventory inventory;
     [SerializeField] private Canvas canvas;
     private CanvasGroup canvasGroup;
 
@@ -30,7 +31,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("on end drag");
-
+       
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
