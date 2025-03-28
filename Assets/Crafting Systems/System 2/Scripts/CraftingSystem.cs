@@ -4,6 +4,7 @@ public class CraftingSystem
 {
     public const int gridSize = 3;
     private Items[,] itemArray;
+    private ItemScriptableObject itemScriptableObject;
     public CraftingSystem()
     {
         itemArray = new Items[gridSize, gridSize];
@@ -48,7 +49,7 @@ public class CraftingSystem
         }
         else
         {
-            if(item.itemType == GetItem(x, y).itemType)
+            if(itemScriptableObject.itemType == GetItem(x, y).itemScriptableObject.itemType)
             {
                 IncreaseItemAmmount(x,y);
                 return true;

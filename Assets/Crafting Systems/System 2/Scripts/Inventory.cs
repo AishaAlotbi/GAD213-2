@@ -9,9 +9,9 @@ public class Inventory
     {
         itemList = new List<Items>();
 
-        AddItem(new Items { itemType = Items.ItemType.Head, amount = 1 });
-        AddItem(new Items { itemType = Items.ItemType.Arm, amount = 2 });
-        AddItem(new Items { itemType = Items.ItemType.Leg, amount = 2 });
+      //  AddItem(new Items { itemType = Items.ItemType.Head, amount = 1 });
+       // AddItem(new Items { itemType = Items.ItemType.Arm, amount = 2 });
+       // AddItem(new Items { itemScriptableObject.itemType, amount = 2 });
 
         Debug.Log(itemList.Count);
         
@@ -25,7 +25,7 @@ public class Inventory
             bool itemAlreadyInInventory = false;
             foreach(Items inventoryItem in itemList)
             {
-                if(inventoryItem.itemType == items.itemType)
+                if(inventoryItem.itemScriptableObject == items.itemScriptableObject)
                 {
                     inventoryItem.amount += items.amount;
                     itemAlreadyInInventory = true;
@@ -49,7 +49,7 @@ public class Inventory
             Items itemInInventory = null;
             foreach (Items inventoryItem in itemList)
             {
-                if (inventoryItem.itemType == items.itemType)
+                if (inventoryItem.itemScriptableObject == items.itemScriptableObject)
                 {
                     inventoryItem.amount -= items.amount;
                     itemInInventory = inventoryItem;

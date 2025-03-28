@@ -31,6 +31,6 @@ public class UICraftingSystem : MonoBehaviour
         Transform itemTransform = Instantiate(itemPrefab, itemContainer);
         RectTransform itemRectTransform = itemTransform.GetComponent<RectTransform>();
         itemRectTransform.anchoredPosition = slotTransformArray[x, y].GetComponent<RectTransform>().anchoredPosition;
-       // itemTransform.GetComponent<UI_Item>().SetItem(Items);
+       // itemTransform.GetComponent<Items>().GetSprite(item);
     }
 }
